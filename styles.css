@@ -1,0 +1,441 @@
+
+/* Variables globales */
+:root {
+    --spotify-green: #1ed760;
+    --spotify-black: #000000;
+    --spotify-white: #ffffff;
+    --spotify-gray: #919496;
+    --spotify-dark-gray: #222326;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: var(--spotify-white);
+    background-color: var(--spotify-black);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Header */
+.main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+.header-logo {
+        flex-shrink: 0;
+    }
+    
+.header-logo img {
+        height: 35px;
+        width: auto;
+    }
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: var(--spotify-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-separator {
+    color: var(--spotify-white);
+    opacity: 0.3;
+    margin: 0 1rem;
+}
+
+
+/* Estilos base de botones */
+.btn {
+    padding: 0.875rem 2.5rem;
+    border-radius: 500px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.04);
+}
+
+/* Botones de la sección hero */
+.btn-pink {
+    background-color: #FF4D94;
+    color: #000;
+}
+
+.btn-dark {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-dark:hover {
+    border-color: #fff;
+}
+
+/* Botones de planes premium */
+.btn-pink-light {
+    background-color: #FFA5C7;
+    color: #000;
+}
+
+.btn-purple {
+    background-color: #AF7BE3;
+    color: #000;
+}
+
+.btn-yellow {
+    background-color: #FFD057;
+    color: #000;
+}
+
+.btn-blue {
+    background-color: #99B7E5;
+    color: #000;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(160deg, rgb(0, 0, 0) 50%, rgb(121, 36, 89) 100%);
+    padding: 7rem 2rem 4rem;
+    width: 100%;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 3rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%; 
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Features section */
+.features-section {
+    width: 100%;
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--spotify-black);
+}
+
+.features-section .section-header {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tabla de comparación */
+.comparison-table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 3rem auto;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table .feature-header {
+    width: 50%;
+}
+
+
+/* Plans info section */
+.plans-info-section {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: var(--spotify-black);
+}
+
+.section-title {
+    max-width: 1170px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.payment-icon {
+    width: 40px; 
+    height: auto;
+    object-fit: contain;
+}
+
+#paypal {
+    width: 65px;
+}
+.premium-plans-section {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 2rem 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+.plan-card {
+    background: #181818;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.plan-features {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.plan-feature {
+    margin: 0.5rem 0;
+}
+.plan-card:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+/* Benefits list */
+.benefits-list {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 20px;
+}
+
+.benefits-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-item {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Questions section */
+.questions-section {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: var(--spotify-black);
+}
+
+.questions-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.questions-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.questions-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.questions-text {
+    font-size: 1.1rem;
+}
+
+.questions-link {
+    color: var(--spotify-white);
+    text-decoration: underline;
+}
+
+.questions-link:hover {
+    color: #1ed760;
+}
+
+/* FAQ section */
+.faq-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--spotify-black);
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-logo {
+    flex-shrink: 0; 
+
+}
+
+.footer-logo .logo {
+    width: 132px;
+    height: auto;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    color: var(--spotify-gray);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-link {
+    color: var(--spotify-white);
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.footer-link:hover {
+    color: var(--spotify-green);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .main-header {
+        padding: 1rem;
+    }
+
+    .premium-plans-section {
+        grid-template-columns: 1fr;
+    }
+}
